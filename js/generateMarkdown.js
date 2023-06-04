@@ -2,6 +2,7 @@
 // If there is no license, return an empty string
 
 //https://img.shields.io/github/license/JackStockwell/readme-generator
+
 function renderLicenseBadge(license) {
   console.log("Badge")
   switch (license) {
@@ -92,7 +93,9 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  ${data.questions}
+  If you want to see my other projects, visit my GitHub [here](https://github.com/${data.username}/). 
+
+  If you have any questions, be sure to send me an email via [here](mailto:${data.email})
   
   ## How to Contribute
   

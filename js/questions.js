@@ -96,7 +96,19 @@ const questions =
         message: 'Please select the license you want to file under',
         name: 'license',
         choices: ['GNU GPLv3 (General Public License)', 'MIT', 'Apache 2.0', 'The Unlicense', 'N/A'],
-    }
+    },
+    {
+        type: 'input',
+        message: 'Please enter your GitHub username. (Please ensure accuracy)',
+        name: 'username',
+        validate: validateAns
+    },
+    {
+        type: 'input',
+        message: 'Please enter your Email. (Please ensure accuracy)',
+        name: 'email',
+        validate: validateAns
+    },
 ];
 
 
