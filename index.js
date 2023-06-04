@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-const markdownModule = require('./js/generateMarkdown')
+const generateMarkdown = require('./js/generateMarkdown')
 const questions = require('./js/questions')
 
 // TODO: Create a function to write README file
@@ -11,12 +11,14 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions)
+    inquirer
+        .prompt(questions)
         .then((response) => {
             console.log(response)
-            const data = markdownModule(response)
+            const data = generateMarkdown(response)
             writeToFile('test.md', data)
         })
+        .catch((error) => error.isTtyError ? console.log("Prompt could not be rendered. Please follow all instruction from GitHub.") : console.log("Something went wrong.. (Check GitHub for issues)"));
 }
 
 // Function call to initialize app
