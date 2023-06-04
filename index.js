@@ -14,10 +14,10 @@ function init() {
     inquirer
         .prompt(questions)
         .then((response) => {
-            console.log(response)
-            const data = generateMarkdown(response)
+            let data = response
+            data = generateMarkdown(response)
             console.log(data)
-            writeToFile('test.md', data)
+            writeToFile('example.md', data)
         })
         .catch((error) => error.isTtyError ? console.log("Prompt could not be rendered. Please follow all instruction from GitHub.") : console.log("Something went wrong.. (Check GitHub for issues)"));
 }
