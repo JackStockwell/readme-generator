@@ -91,7 +91,13 @@ const questions =
         name: 'test',
         validate: validateAns
     },
+    {
+        type: 'list',
+        message: 'Please select the license you want to file under',
+        name: 'license',
+        choices: ['GNU GPLv3 (General Public License)', 'MIT', 'Apache 2.0', 'The Unlicense', 'N/A'],
+    }
 ];
 
 
-module.exports = {questions, license};
+module.exports = questions;

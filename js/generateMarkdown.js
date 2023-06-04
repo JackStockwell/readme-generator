@@ -1,14 +1,45 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+
+//https://img.shields.io/github/license/JackStockwell/readme-generator
+function renderLicenseBadge(license) {
+  switch (license) {
+    case 'GNU GPLv3 (General Public License)':
+      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    case 'MIT':
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    case 'Apache 2.0':
+      return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    case 'The Unlicense':
+      return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+    case 'N/A':
+      return ""
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  switch (license) {
+    case 'GNU GPLv3 (General Public License)':
+      return "https://www.gnu.org/licenses/gpl-3.0"
+    case 'MIT':
+      return "https://opensource.org/licenses/MIT"
+    case 'Apache 2.0':
+      return "https://opensource.org/licenses/Apache-2.0"
+    case 'The Unlicense':
+      return "http://unlicense.org/"
+    case 'N/A':
+      return ""
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  `This project is licensed under the \"${license}\" License. 
+  The full details of which can be found [Here](${renderLicenseLink(data.license)})`
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -31,7 +62,11 @@ function generateMarkdown(data) {
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
+
+  ## Badges
   
+  ${renderLicenseBadge(data.license)}
+
   ## Installation
 
   ${data.install}
@@ -55,12 +90,8 @@ function generateMarkdown(data) {
   If you followed tutorials, include links to those here as well.
   
   ## License
-  
-  The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-  
-  ---
-  
-  🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+
+  ${renderLicenseSection(data.license)}
   
   ## Badges
   

@@ -16,6 +16,7 @@ function init() {
         .then((response) => {
             console.log(response)
             const data = generateMarkdown(response)
+            console.log(data)
             writeToFile('test.md', data)
         })
         .catch((error) => error.isTtyError ? console.log("Prompt could not be rendered. Please follow all instruction from GitHub.") : console.log("Something went wrong.. (Check GitHub for issues)"));
