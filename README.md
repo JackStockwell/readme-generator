@@ -48,5 +48,8 @@ Once initialised, you will be prompted with a series of questions that need to b
 
 ## License
 
-https://unlicense.org/
+![GitHub](https://img.shields.io/github/license/JackStockwell/readme-generator)
 
+## Test
+
+Submitting empty strings causes an error to appear, informing the user that the fields cannot be empty.
