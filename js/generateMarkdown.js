@@ -1,6 +1,5 @@
 // Renders the License Badge in markdown using a switch.
 function renderLicenseBadge(license) {
-  console.log("Badge")
   switch (license) {
     case 'GNU GPLv3 (General Public License)':
       return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
@@ -17,7 +16,6 @@ function renderLicenseBadge(license) {
 
 // Renders the Link in markdown using a switch.
 function renderLicenseLink(license) {
-  console.log("Link")
   switch (license) {
     case 'GNU GPLv3 (General Public License)':
       return "https://www.gnu.org/licenses/gpl-3.0"
@@ -61,7 +59,7 @@ function generateMarkdown(data) {
 
   ${learn}
   
-  ## Table of Contents (Optional)
+  ## Table of Contents
     
   - [Installation](#installation)
   - [Usage](#usage)
