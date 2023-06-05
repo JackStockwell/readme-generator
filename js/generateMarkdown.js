@@ -1,8 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
-//https://img.shields.io/github/license/JackStockwell/readme-generator
-
+// Renders the License Badge in markdown using a switch.
 function renderLicenseBadge(license) {
   console.log("Badge")
   switch (license) {
@@ -19,8 +15,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Renders the Link in markdown using a switch.
 function renderLicenseLink(license) {
   console.log("Link")
   switch (license) {
@@ -37,8 +32,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Renders the license section for generate markdown, calls upon renderlincense.
 function renderLicenseSection(license) {
 
   if (license === 'N/A') {
@@ -46,10 +40,10 @@ function renderLicenseSection(license) {
   }
 
   return `This project is licensed under the \"${license}\" License. 
-  The full details of which can be found [Here](${renderLicenseLink(license)})`
+  The full details of which can be found [here](${renderLicenseLink(license)})`
 }
 
-// TODO: Create a function to generate markdown for README
+// Creates the README.md content. Takes the answers from the inquiry prompt.
 function generateMarkdown(data) {
   return `
   # ${data.title}
