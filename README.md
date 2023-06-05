@@ -1,6 +1,6 @@
 # README Generator
 
-![GitHub top language](https://img.shields.io/github/languages/top/JackStockwell/readme-generator) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/JackStockwell/readme-generator/inquirer)
+![GitHub top language](https://img.shields.io/github/languages/top/JackStockwell/readme-generator) ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/JackStockwell/readme-generator/inquirer) [![Link to node Js version download](https://img.shields.io/badge/node-v16.18.0-green)](https://nodejs.org/download/release/latest-v16.x/)
 
 ## Description
 
