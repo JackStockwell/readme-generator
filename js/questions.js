@@ -1,27 +1,5 @@
 
-// TODO: Create an array of questions for user input
-
-// TABLE OF CONTENTS
-
-// WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-
-// THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, 
-// and Tests
-
-// WHEN I choose a license for my application from a list of options
-// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README 
-// entitled License that explains which license the application is covered under
-
-// WHEN I enter my GitHub username
-// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-
-// WHEN I enter my email address
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with 
-// additional questions
-
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README.
-
+// Used to validate whether an answer was inputted.
 const validateAns = (answer) => {
     if (answer.length < 1) {
         return "Please enter an answer, if it is not applicable please enter N/A as your answer."
@@ -29,6 +7,7 @@ const validateAns = (answer) => {
     return true;
 };
 
+// The array of questions.
 const questions = 
 [
     {
@@ -91,7 +70,25 @@ const questions =
         name: 'test',
         validate: validateAns
     },
+    {
+        type: 'list',
+        message: 'Please select the license you want to file under',
+        name: 'license',
+        choices: ['GNU GPLv3 (General Public License)', 'MIT', 'Apache 2.0', 'The Unlicense', 'N/A'],
+    },
+    {
+        type: 'input',
+        message: 'Please enter your GitHub username. (Please ensure accuracy)',
+        name: 'username',
+        validate: validateAns
+    },
+    {
+        type: 'input',
+        message: 'Please enter your Email. (Please ensure accuracy)',
+        name: 'email',
+        validate: validateAns
+    },
 ];
 
 
-module.exports = {questions, license};
+module.exports = questions;
