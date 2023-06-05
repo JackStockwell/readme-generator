@@ -36,4 +36,17 @@ This will initialise the README generator.
 
 ## Usage
 
-Once initialised, you will be prompted with a series of questions that need to be answered professionally to generate.
+Once initialised, you will be prompted with a series of questions that need to be answered professionally to generate the README file. Once generated, it will appear in the README-GEN folder for use, this is to avoid the file overiding the app's README.
+
+## Credits
+
+[Inquirer](https://www.npmjs.com/package/inquirer) - The Inquirer documentation.
+
+[GitHub page of Markdown Shield badges.](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba) - Used to get the templates of the shields needed to generate the badges.
+
+[Choose a license](https://choosealicense.com/) - A website with all GitHub licenses.
+
+## License
+
+https://unlicense.org/
+
