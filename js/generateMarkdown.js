@@ -43,20 +43,23 @@ function renderLicenseSection(license) {
   The full details of which can be found [here](${renderLicenseLink(license)})`
 }
 
+
+
 // Creates the README.md content. Takes the answers from the inquiry prompt.
 function generateMarkdown(data) {
+  const {title, description, motivation, solve, learn, install, use, credit, contribute, test, license, username, email} = data
   return `
-  # ${data.title}
+  # ${title}
 
   ## Description
   
-  ${data.description}
+  ${description}
 
-  ${data.motivation}
+  ${motivation}
 
-  ${data.solve}
+  ${solve}
 
-  ${data.learn}
+  ${learn}
   
   ## Table of Contents (Optional)
     
@@ -67,37 +70,37 @@ function generateMarkdown(data) {
 
   ## Badges
   
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseBadge(license)}
 
   ## Installation
 
-  ${data.install}
+  ${install}
   
   ## Usage
 
-  ${data.use}
+  ${use}
       
   ## Credits
   
-  ${data.credit}
+  ${credit}
   
   ## License
 
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(license)}
   
   ## Questions
   
-  If you want to see my other projects, visit my GitHub [here](https://github.com/${data.username}/). 
+  If you want to see my other projects, visit my GitHub [here](https://github.com/${username}/). 
 
-  If you have any questions, be sure to send me an email via [here](mailto:${data.email})
+  If you have any questions, be sure to send me an email via [here](mailto:${email})
   
   ## How to Contribute
   
-  ${data.contribute}
+  ${contribute}
   
   ## Tests
   
-  ${data.test}
+  ${test}
   `;
 }
 
