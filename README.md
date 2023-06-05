@@ -10,7 +10,7 @@ The reason I made this project was to practice my basic understand of node.js an
 
 I learnt many things about how to export modules in JS, the use of node.js and the use of the filesystem. As well as the Inquirer NPM. This can allow me to better separate my code in JavaScript into other files to make it easier to read and edit.
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
