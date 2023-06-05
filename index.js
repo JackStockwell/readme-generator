@@ -22,8 +22,8 @@ function init() {
             console.log("Creating...")
             // Returns a completed Markdown file content.
             const data = generateMarkdown(response)
-            // File is created using the markdown content.
-            writeToFile('example.md', data)
+            // File is created using the markdown content. Saved to the README-GEN folder.
+            writeToFile('./README-GEN/README.md', data)
         })
         // If there is an error, this is flagged.
         .catch((error) => error.isTtyError ? console.log("Prompt could not be rendered. Please follow all instruction from GitHub.") : console.log("Something went wrong.. (Check GitHub for issues)"));
