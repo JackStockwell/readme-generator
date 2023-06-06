@@ -52,6 +52,8 @@ Once initialised, you will be prompted with a series of questions that need to b
 
 ![GitHub](https://img.shields.io/github/license/JackStockwell/readme-generator)
 
+This repo is using The Unlicense. More infomation can be found [here](https://unlicense.org/)
+
 ## Test
 
 Submitting empty strings causes an error to appear, informing the user that the fields cannot be empty.
