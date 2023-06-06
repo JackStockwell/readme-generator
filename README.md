@@ -19,6 +19,8 @@ I learnt many things about how to export modules in JS, the use of node.js and t
 
 ## Installation
 
+I recommend following my tutorial which can be found [here](https://watch.screencastify.com/v/GUleD39cbolL2rSouIzZ) for a better understanding.
+
 To run the application, you will need it be cloned to your local machine. once opened in VS Code open a terminal and place the following into the terminal.
 
 ```sh
